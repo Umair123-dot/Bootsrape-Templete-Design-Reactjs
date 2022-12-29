@@ -1,0 +1,55 @@
+.timing-wrapper {
+    .timing-inner-wrapper {
+        position: relative;
+        margin-top: -87px;
+    }
+    .container {
+        background-color: $navlogo;
+        color: $whitebtn;
+    
+        .image-text {
+            .image {
+                
+                padding-left: 30px;
+            }
+            .text-up {
+                font-family: Georgia, "Times New Roman", Times, serif;
+                font-weight: bold;
+                font-size: 30px;
+               
+                .change-text-c {
+                    color: $btnYellow;
+                }
+            }
+        }
+        .lanch-time {
+            
+         
+            .time {
+                flex-basis: 100px;
+                // margin-left: 30px;
+                
+
+                .t-hours {
+                   padding-top: 20px;
+                    font-size: 60px;
+                    margin-bottom: -12px;
+                    font-family: "Glory", sans-serif;
+                  
+                    font-weight: bold;
+                    .time-dot {
+                        padding: 20px;
+                        font-size: 30px;
+
+                        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
+                            Geneva, Verdana, sans-serif;
+                    }
+                }
+                .t-minutes {
+                   
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
+}

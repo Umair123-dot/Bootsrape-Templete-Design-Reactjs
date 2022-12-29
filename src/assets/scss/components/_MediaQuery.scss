@@ -1,0 +1,102 @@
+
+
+@media (max-width: 667px) {
+    .image {
+        width: 300px;
+        margin: 0;
+        padding-bottom: 100px;
+    }
+    .detail-image{
+        top: -80px !important;
+    }
+    .copyright {
+        font-size: 9px;
+    }
+    .footer-top {
+    margin-left:30px;
+    }
+    .feedback-content {
+        width: 300px;
+    }
+    .course-content {
+    }
+    .footer-p {
+        padding-left: 0px;
+    }
+    .lanch-time{
+        margin-top: -100px;
+        padding-left:20px;
+        padding-bottom: 30px;
+       
+        .time {
+             
+            .t-hours{
+                font-size: 30px !important;
+            }
+            .time-dot{
+                font-size: 20px;
+            }
+            .t-minutes{
+                font-size: 10px;
+                margin-left: 0px;
+            }
+
+            
+        }
+    }
+    .text-up {
+        
+        font-size: 15px !important;
+        
+       
+       
+    }
+    .btn{
+        margin-bottom: 20px;
+    }
+    .btn-second{
+        width: 152px;
+    }
+    input {
+       
+      
+        &::placeholder{
+            font-size: 13px !important;
+        }
+    }
+    .detail-content{
+        left: 64px !important;
+    }
+  
+}
+@media screen and (min-width: 992px) and (max-width:1199px) {
+    
+
+    .t-hours{
+        margin-top: 25px;
+        font-size: 40px !important;
+       
+    }
+    
+}
+
+@media (min-width:768px) and (max-width: 992px) {
+
+    .sus-content {
+        margin-bottom: 150px;
+        .btn-umair {
+            margin-left: -100px;
+        }
+    }
+    .detail-image{
+        top: -100px !important;
+    }
+    input {
+       
+      
+        &::placeholder{
+            font-size: 13px !important;
+        }
+    }
+    
+}

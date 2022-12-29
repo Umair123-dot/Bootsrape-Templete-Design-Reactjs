@@ -1,0 +1,61 @@
+.it-wreapper {
+    padding-bottom: 87px;
+    background-color: $bgnavbar;
+
+    .image {
+       padding: 90px 0px;
+       
+    }
+    .text {
+        margin: 115px 0px 160px 10px;
+        h4 {
+            font-family: "Times New Roman", Times, serif;
+            font-weight: bold;
+            font-size: 30px;
+            color: $navlogo;
+        }
+        h1 {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-weight: 400;
+            font-size: 60px;
+            color: $navlogo;
+        }
+        .multi-btns {
+            .btn {
+                background-color: $btnYellow; /* Green */
+                border: none;
+                
+                color: $black;
+
+                padding: 15px 30px;
+                font-size: 16px;
+                
+                margin-right: 10px;
+                border-radius: 4px;
+
+                cursor: pointer;
+                &:hover{
+                    background-color: $whitebtn;
+                    color: $btnYellow;
+                }
+            }
+            .btn-second {
+                background-color: $whitebtn; /* Green */
+                border: none;
+                color: $black;
+                padding: 15px 30px;
+                font-size: 16px;
+                margin-right: 10px;
+                border-radius: 4px;
+
+                
+
+                cursor: pointer;
+                &:hover{
+                    background-color: $navlogo;
+                    color: $whitebtn;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.navbar-top {
+    background-color: $bgnavtop;
+    padding-block: 12px;
+    .contact-info {
+        li {
+            a {
+                font-size: 14px;
+                color: $black;
+                i {
+                    padding-right: 10px;
+                }
+            }
+
+            &:not(:last-child) {
+                @media screen and (min-width: 768px) {
+                    margin-right: 54px;
+                }
+            }
+        }
+    }
+    .social-icons {
+        li {
+            a {
+                font-size: 13px;
+                color: $black;
+            }
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+        }
+    }
+}
