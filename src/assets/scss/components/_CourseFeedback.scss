@@ -1,0 +1,94 @@
+.course-detail-feedback {
+    background-color: $bgnavbar;
+   // feedbaccontent-area
+   .course-detail-content {
+       .coursed-feedb-heading {
+           color: $navlogo;
+           font-weight: bold;
+           font-size: 48px;
+           font-family: Georgia, "Times New Roman", Times, serif;
+       }
+       .course-bg {
+           color: $btnYellow;
+           font-family: Georgia, "Times New Roman", Times, serif;
+           font-weight: bold;
+           font-size: 48px;
+           margin-top: -30px;
+       }
+       .coursed-para {
+           font-size: 16px;
+           color: $black;
+       }
+       .detail-feedb-small {
+           color: $navlogo;
+           font-size: 16px;
+       }
+       .coursed-feedb-image {
+           margin-bottom: 10px;
+           .coursed-image-sec {
+               z-index: 2;
+               
+              
+           }
+           .feedb-image-con {
+               // padding: 18px 50px 10px 30px;
+               margin-left: -15px;
+               z-index: 1;
+               border-radius: 5px;
+               padding-left: 40px;
+              padding-right: 30px;
+               padding-top: 25px;
+               background-color: #ffffff;
+               
+               .coused-feedb-image-head {
+                   color: $navlogo;
+                
+                   font-size: 16px;
+               }
+
+               .course-feedb-image-p {
+                   color: $cardfont;
+                   padding-left: 10px;
+                   font-size: 12px;
+               }
+           }
+       }
+   }
+   .course-detail-image {
+      
+       position: relative;
+       margin-left: 21px;
+       .detail-image {
+           background-color: #fdc800;
+           position: absolute;
+           top: -40px;
+           left: -20px;
+           padding: 5px;
+       }
+
+       .detail-content {
+           position: relative;
+           background-color:$whitebtn;
+           bottom: 35px;
+           left: 55px;
+           width: 67%;
+           border-radius: 3px;
+
+           .detail-short-head {
+               padding-top: 15px;
+               color: #212529;
+               font-size: 20px;
+               
+               font-family: Georgia, "Times New Roman", Times, serif;
+               
+           
+           }
+           .detail-short-para {
+               color: #757575;
+               font-size: 14px;
+               margin-top: -15px;
+               padding-bottom: 10px;
+           }
+       }
+   }
+}

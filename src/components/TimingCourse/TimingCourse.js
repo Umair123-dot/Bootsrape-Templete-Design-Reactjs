@@ -6,7 +6,7 @@ const TimingCourse = () => {
                 <div className="timing-inner-wrapper">
                     <div className="container rounded">
                         <div className="row flex-column flex-md-row flex-lg-row py-4">
-                            <div className="col-12 col-md-12 col-lg-7 col-xl-8">
+                            <div className="col-12 col-md-12 col-lg-7 col-xl-7">
                                 <div className="image-text d-flex justify-content-center align-content-center">
 
                                     <img src={TimingImage} className=" img-fluid image" alt="" />
@@ -17,7 +17,7 @@ const TimingCourse = () => {
 
                                 </div>
                             </div>
-                            <div className="col-12 col-md-12 col-lg-5 col-xl-4">
+                            <div className="col-12 col-md-12 col-lg-5 col-xl-5">
                                 <div className="lanch-time d-flex justify-content-center align-items-center">
                                     <div className="time">
                                         <p className="t-hours">11<span className="time-dot">:</span></p>

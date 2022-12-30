@@ -11,9 +11,9 @@ const FeedbackStudent = () => {
             <div className="col-12 col-md-6 pt-5">
 
                 <div className="course-detail-image">
-                    <img src={bgImage} alt="" className="img-fluid" />
+                <img src={bgImage} alt="" className="img-fluid" />
                     <div className="detail-image  ms-md-0">
-                        <img src={UpperImage} alt="" className="img-fluid" />
+                    <img src={UpperImage} alt="" className="img-fluid" />
                     </div>
                     <div className="detail-content text-center ">
                         <p className="detail-short-head">Kimmie Vo</p>
@@ -46,7 +46,7 @@ const FeedbackStudent = () => {
                     <div className="coursed-feedb-image d-flex">
                         <div className="coursed-image-sec pt-4 pt-md-4 pt-lg-1 ">
 
-                            <img src={feebackImage} className="img-fluid rounded" alt="..." />
+                        <img src={feebackImage} classNameName="img-fluid rounded" alt="..." />
                         </div>
                         <div className="feedb-image-con">
                             <p className="h5 coused-feedb-image-head">Modern and Contemporary Art and Design</p>
@@ -58,6 +58,9 @@ const FeedbackStudent = () => {
         </div>
     </div>
 </div>
+
+
+
   );
 };
 

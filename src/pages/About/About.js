@@ -1,8 +1,13 @@
 import React from 'react'
+import Pricing from '../../components/Pricing/Pricing'
+import Subscribe from '../../components/Subscribe/Subscribe'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <Pricing />   
+      <Subscribe /> 
+    </div>
   )
 }
 

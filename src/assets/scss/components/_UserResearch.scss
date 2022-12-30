@@ -1,0 +1,85 @@
+@import 'ResualbleStyles';
+
+
+    .course-details-wrapper {
+       @include bg-itsection;
+        .course-details-relate {
+            .course-content {
+                .course-head-small {
+                    color: $bgnavtop;
+                    font-size: 16px;
+                }
+                .couse-head-large {
+                    font-family: Georgia, "Times New Roman", Times, serif;
+                    font-size: 48px;
+                    color: $navlogo;
+                    font-weight: bold;
+                    margin-top: -10px;
+                }
+            }
+            .course-detail-heading {
+                .course-details-head {
+                    font-family: Georgia, "Times New Roman", Times, serif;
+                    font-size: 48px;
+                    color: $navlogo;
+                    font-weight: bold;
+                }
+                .coursedetails-paragrape {
+                    font-size: 16px;
+                    color: $black;
+                    padding-bottom: 31px;
+                }
+                .coursedetails-paragrape {
+                    font-size: 16px;
+                    color: $black;
+                }
+
+                .de-course-list {
+                    .de-course-para {
+                        font-size: 16px;
+                        color: $black;
+                        .de-course-span {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            .coursedetail-main {
+                .d-card-text {
+                    .d-custumer {
+                        font-size: 14px;
+                        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
+                            Geneva, Verdana, sans-serif;
+                        color: $cardfont;
+                    }
+                    .d-mail {
+                        font-size: 14px;
+                        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
+                            Geneva, Verdana, sans-serif;
+                        color: #00b2b2;
+                        font-weight: bold;
+                        margin-top: -16px;
+                    }
+                }
+
+                .img-setting {
+                    padding-top: 22px;
+                    padding-bottom: 22px;
+                }
+                .coursedetail-card-ul {
+                    .coursedetail-card-li {
+                        font-size: 17px;
+                        color: $black;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: bold;
+                        padding: 18px;
+
+                        span {
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }

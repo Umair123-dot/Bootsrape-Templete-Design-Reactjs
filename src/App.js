@@ -1,3 +1,4 @@
+import React,{useState,useEffect} from "react";
 import "./assets/scss/base.scss";
 import { Home } from "./pages/Home/index";
 import {About} from "./pages/About/index";
@@ -6,29 +7,44 @@ import {CourseDetail} from './pages/CourseDetail/index';
 import Topbar from './components/Topbar/Topbar';
 import Header from './components/Header/Header';
 
+//Helper Routes
+import {APP_ROUTES} from './helper/routesHelper';
+
 
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
+import { Loader } from "./components/Loader";
 
 
 
 
 function App() {
+  const [loading, setLoading] = useState(true)
+   useEffect(() => {
+    setTimeout(() => setLoading(false), 2000)
+  }, [])
+
   return (
-    <div className="App">
+    <>
+    {
+      loading===false ? (<div className="App">
+
       <Router>
         <Topbar />
         <Header />
        
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route  path="/about" element={<About />} />
-          <Route  path="/course" element={<Course />} />
-          <Route  path="/coursedetail" element={<CourseDetail />} />
+          <Route exact path={APP_ROUTES.HOME} element={<Home />} />
+          <Route  path={APP_ROUTES.ABOUT} element={<About />} />
+          <Route  path={APP_ROUTES.COURSE} element={<Course />} />
+          <Route  path={APP_ROUTES.COURSEDETAIL} element={<CourseDetail />} />
         </Routes>
         <Footer />
       </Router>
-    </div>
+    </div>):(<Loader classes="overlay-loading-container" />)
+    }
+    </>
+    
   );
 }
 

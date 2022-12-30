@@ -1,0 +1,72 @@
+.suscribe-wrapper {
+    .subscribe-image {
+        margin-left: 90px;
+    }
+    .subscribe-image {
+        margin-left: 90px;
+    }
+
+    .sus-content {
+        margin-top: 180px;
+
+        .form-input {
+            position: relative;
+            .btn-umair {
+                position: absolute;
+                background-color: $bgnavtop;
+                right: 2px;
+                top: 2px;
+                // margin-left: 313px;
+                //width: 164px;
+                border-radius: 5px;
+
+                border: 1px solid $whitebtn;
+                color: #002147;
+            }
+            .icon {
+                position: absolute;
+                left: 15px;
+                top: 0;
+                font-size: 25px;
+                color: $black;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            input {
+                border: 1px solid #bdbdbd;
+                border-radius: 5px;
+                padding: 5px 10px 5px 50px;
+                font-size: 18px;
+                line-height: 30px;
+                outline: 0;
+                display: block;
+                width: 100%;
+                &::placeholder{
+                    font-size: 20px;
+                }
+            }
+        }
+        .subs-heading {
+            font-size: 16px;
+            color: $bgnavtop;
+            font-weight: bold;
+        }
+    }
+    .main-heading {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 48px;
+        color: $navlogo;
+    }
+    @media (max-width: 768px) {
+        .sus-content {
+            margin-top: 4px;
+            padding-bottom: 20px;
+        }
+        .subscribe-image {
+            padding-top: 10px;
+            margin-left: 30px;
+        }
+    }
+}

@@ -1,14 +1,16 @@
-import React from "react";
+import React,{useState} from "react";
 import logo from '../../assets/images/logo.png';
 import { Link } from "react-router-dom";
+import { Button } from "../Button";
+import { type } from "@testing-library/user-event/dist/type";
 
 const Header = () => {
+  const [loading, setLoading] = useState(false)
   return (
     <div className="">
       <nav
-        className="navbar navbar2 navbar-expand-lg nav-pills"
-        id="pills-tab"
-        role="tablist"
+        className="navbar navbar2 navbar-expand-lg"
+       
       >
         <div className="container">
           <Link className="navbar-brand" to="/">
@@ -35,9 +37,9 @@ const Header = () => {
             <span className="fa-solid fa-bars" style={{color:"#002147"}}></span>
           </button>
           <div className="collapse navbar-collapse" id="mynavbar">
-            <ul className="navbar-nav nav-pills   ms-auto mb-3  mb-lg-0">
+            <ul className="navbar-nav  ms-auto mb-3  mb-lg-0"  >
               <li className="nav-item">
-                <Link className="nav-link active" to="/">
+                <Link className="nav-link" to="/" >
                   Home
                 </Link>
               </li>
@@ -53,15 +55,16 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/coursedetail">
+                <Link className="nav-link" to="/detailcourse">
                   Contact
                 </Link>
               </li>
             </ul>
             <form className="d-flex search" role="search">
-              <button className="btn1" type="submit">
+              {/* <button className="btn1" type="submit">
                 Sign Up
-              </button>
+              </button> */}
+              <Button className='btn1' title="Sign Up" type="submit" isLoading={loading}  />
 
               <div className="form-group has-search">
                 <span className="fa fa-search form-control-feedback"></span>

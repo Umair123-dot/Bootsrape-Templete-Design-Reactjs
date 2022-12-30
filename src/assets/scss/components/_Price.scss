@@ -1,0 +1,108 @@
+.price-wrapper {
+    background-color: $bgnavbar;
+    .price-heading {
+        margin-top: 10px;
+        .price-small-heading {
+            color: $btnYellow;
+            font-size: 16px;
+            font-family: "Inter", sans-serif;
+        }
+        .price-large-heading {
+            padding-top: -10;
+            color: $navlogo;
+            font-size: 48px;
+            font-family: "Inter", sans-serif;
+        }
+    }
+    .price-button {
+        background-color: $whitebtn;
+        padding: 5px 5px 5px 5px;
+        margin-top: 10px;
+        border-radius: 2px;
+        .btn-group {
+            .btn-price-monthly {
+                background-color: #00b2b2;
+                color: $whitebtn;
+                font-family: "Inter", sans-serif;
+
+                border-radius: 1px;
+                padding-right: 20px;
+                padding-left: 20px;
+                &:hover {
+                    background-color: $whitebtn;
+                    color: $black;
+                }
+            }
+            .btn-price-yearly {
+                padding-right: 20px;
+                padding-left: 20px;
+                margin-left: 5px;
+                border-radius: 1px;
+                font-family: "Inter", sans-serif;
+                &:hover {
+                    background-color: $navlogo;
+                    color: $whitebtn;
+                }
+            }
+        }
+    }
+
+    .price-main-section {
+        background-color: $whitebtn;
+
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-left: 10px;
+        .price-main-head {
+            background-color: $navlogo;
+            width: 144px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color: white;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+        }
+
+        hr {
+            border: 1px solid $cardfont;
+        }
+        .price-starter {
+            color: $navlogo;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 60px;
+        }
+        .price-one {
+            font-weight: 900;
+            font-size: 30px;
+            color: $navlogo;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+        li {
+            font-size: 16px;
+            color: $navlogo;
+            font-family: "Inter", sans-serif;
+            i {
+                padding-right: 12px;
+            }
+        }
+
+        .btn-primary {
+            background-color: $navlogo;
+            border: 1px solid $navlogo;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+        }
+        .btn1 {
+            background-color: $btnYellow;
+            border: 1px solid $btnYellow;
+            color: $black;
+        }
+        .price-sub-heading {
+            color: #bdbdbd;
+            font-size: 16px;
+            font-family: "Times New Roman", Times, serif;
+        }
+    }
+}

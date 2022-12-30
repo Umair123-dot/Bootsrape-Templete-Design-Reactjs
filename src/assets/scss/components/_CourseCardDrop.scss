@@ -1,0 +1,94 @@
+@import 'ResualbleStyles';
+.course-wrapper {
+    // &::before {
+    //     position: relative;
+    //     content: "";
+    //     background-color: red;
+    //     width: 100%;
+    //     height: 100%;
+    //     top: 40%;
+
+    // }
+   @include bg-itsection;
+
+    .course-relate {
+        .course-content {
+            .course-head-small {
+                color: $bgnavtop;
+                font-size: 16px;
+            }
+            .couse-head-large {
+                font-family: Georgia, "Times New Roman", Times, serif;
+                font-size: 48px;
+                color: $navlogo;
+                font-weight: bold;
+                margin-top: -10px;
+            }
+        }
+
+        .label {
+            color: #002147;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .btn-group {
+            .course-button {
+                margin-left: 3px;
+                background-color: $whitebtn;
+                border-top: 2px solid $cardfont;
+                border-left: 2px solid $cardfont;
+                border-bottom: 2px solid $cardfont;
+            }
+            .btn {
+                border-radius: 1px;
+            }
+            .course-drop-arrow {
+                border-top: 2px solid $cardfont;
+                border-right: 2px solid $cardfont;
+                border-bottom: 2px solid $cardfont;
+                background-color: $whitebtn;
+            }
+        }
+    }
+
+    .select-course-wrapper {
+        .card {
+            .image-card {
+      
+                background: url("../../images/cardimage.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                min-height: 200px;
+                padding: 20px;
+                border-bottom: 0px;
+                .image-sort {
+                    position: relative;
+                    bottom: -40px;
+                    border: 10px solid $whitebtn;
+                }
+            }
+            .card-content-area {
+                padding-left: 28px;
+                .card-heading1 {
+                    padding-top: 24px;
+                    font-weight: bold;
+                    font-family: "Times New Roman", Times, serif;
+                    font-size: 15px;
+                    color: $navlogo;
+                }
+                .card-text {
+                    font-family: Georgia, "Times New Roman", Times, serif;
+                    color: $cardfont;
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+            }
+            // .image-large {
+            //     .image-large {
+            //         height: 100%;
+            //     }
+
+            // }
+        }
+    }
+}
