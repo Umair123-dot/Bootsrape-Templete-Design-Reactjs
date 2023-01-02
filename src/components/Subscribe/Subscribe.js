@@ -1,12 +1,14 @@
-import React,{useState} from 'react'
+import React from 'react'
 import SubscribeImage from '../../assets/images/Recruiting.png';
 import { Button } from "../Button";
 
 const Subscribe = () => {
     
-  const [loading, setLoading] = useState(false)
+//   const [loading, setLoading] = useState(false);
+ 
   return (
     <div className="suscribe-wrapper">
+                
                 <div className="container">
                     <div className="row">
                         <div className="col-md-5">
@@ -22,9 +24,8 @@ const Subscribe = () => {
 
 
                                 <div className="form-input">
-                                    <Button className="btn btn-umair" type="submit" title="Subscrible Now" isLoading={loading}  />
-                                    {/* <button className="btn btn-outline-secondary btn-umair" type="button">Subscrible
-                                        Now</button> */}
+                                    <Button className="btn btn-umair" type="submit" title="Subscrible Now"   />
+                                    {/* isLoading={loading} */}
                                     <span className="icon"><i className="fa fa-envelope" aria-hidden="true"></i></span>
                                     <input type="email" name="email" placeholder="Enter email address" />
                                 </div>

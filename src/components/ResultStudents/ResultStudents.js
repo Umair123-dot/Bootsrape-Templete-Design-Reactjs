@@ -61,7 +61,7 @@ const ResultStudents = () => {
                     </div>
                     <div className="result-para">
                         <p className="result-number text-center">32</p>
-                        <p className="result-alph text-center">AWARDS ACHIEVED </p>
+                        <p className="result-alph text-center">AWARDS ACHIEVED</p>
                     </div>
                     <div>
                     </div>
