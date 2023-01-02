@@ -4,7 +4,7 @@ const Loader =props=>{
    const {
     classes="",
     color="loaderColor",
-    showVerifyText="false",
+   
     position="justify-content-centent align-items-center"
    } =props
      return(

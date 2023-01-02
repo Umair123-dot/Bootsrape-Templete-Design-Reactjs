@@ -1,11 +1,11 @@
-import React,{useState} from "react";
+import React from "react";
 import logo from '../../assets/images/logo.png';
 import { NavLink } from "react-router-dom";
 import { Button } from "../Button";
 
 
 const Header = () => {
-  const [loading, setLoading] = useState(false)
+  // const [loading, setLoading] = useState(false)
 
   let activeStyle = {
     backgroundColor:"#fdc800",
@@ -75,8 +75,8 @@ const Header = () => {
               {/* <button className="btn1" type="submit">
                 Sign Up
               </button> */}
-              <Button className='btn1' title="Sign Up" type="submit" isLoading={loading}  />
-
+              <Button className='btn1' title="Sign Up" type="submit"  />
+              {/* isLoading={loading} */}
               <div className="form-group has-search">
                 <span className="fa fa-search form-control-feedback"></span>
                 <input type="text" className="form-control" placeholder="" />

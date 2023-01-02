@@ -7,12 +7,11 @@ const Button = (props) => {
     className = "",
     title,
     type = "button",
-    size = "md",
-    disable,
+  
     isLoading = false,
   } = props;
   return (
-    <button className={`${className}`} type={type} onClick={onclick}>
+    <button className={`${className}`} type={type} onClick={onClick}>
       {isLoading ? <Loader />
        : (
         title
