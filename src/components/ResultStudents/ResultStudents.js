@@ -10,9 +10,9 @@ const ResultStudents = () => {
         <div className="row mb-4">
             <div className="col-12 col-md-6 col-lg-3">
                 <div className="result-seciton">
-                    <div className="result-image">
+                    <div className="result">
                         <img src={ImageR1} className="mx-auto d-block" height="301"
-                            width="270" alt="Responsive image" />
+                            width="270" alt="Responsive" />
                     </div>
                     <div className="result-para">
                         <p className="result-number text-center">768</p>
@@ -25,9 +25,9 @@ const ResultStudents = () => {
             </div>
             <div className="col-12 col-md-6 col-lg-3">
                 <div className="result-seciton">
-                    <div className="result-image">
+                    <div className="result">
                         <img src={ImageR2} className="mx-auto d-block" height="301"
-                            width="270" alt="Responsive image" />
+                            width="270" alt="Responsive" />
                     </div>
                     <div className="result-para ">
                         <p className="result-number text-center">120</p>
@@ -40,9 +40,9 @@ const ResultStudents = () => {
             </div>
             <div className="col-12 col-md-6 col-lg-3">
                 <div className="result-seciton">
-                    <div className="result-image">
+                    <div className="result">
                         <img src={ImageR3} className="mx-auto d-block" height="301" width="270"
-                            alt="Responsive image" />
+                            alt="Responsive" />
                     </div>
                     <div className="result-para">
                         <p className="result-number text-center"><sup></sup>8,300<span></span></p>
@@ -55,9 +55,9 @@ const ResultStudents = () => {
             </div>
             <div className="col-12 col-md-6 col-lg-3">
                 <div className="result-seciton">
-                    <div className="result-image">
+                    <div className="result">
                         <img src={ImageR4} className="mx-auto d-block" height="301" width="270"
-                            alt="Responsive image" />
+                            alt="Responsive" />
                     </div>
                     <div className="result-para">
                         <p className="result-number text-center">32</p>
