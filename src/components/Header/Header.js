@@ -1,8 +1,8 @@
 import React,{useState} from "react";
 import logo from '../../assets/images/logo.png';
-import { Link,NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Button } from "../Button";
-import { type } from "@testing-library/user-event/dist/type";
+
 
 const Header = () => {
   const [loading, setLoading] = useState(false)

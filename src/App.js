@@ -11,7 +11,7 @@ import Header from './components/Header/Header';
 import {APP_ROUTES} from './helper/routesHelper';
 
 
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router,Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import { Loader } from "./components/Loader";
 

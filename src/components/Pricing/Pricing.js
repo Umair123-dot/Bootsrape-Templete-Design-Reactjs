@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const Pricing = () => {
   return (
     <div className="price-wrapper">
@@ -17,8 +17,8 @@ const Pricing = () => {
                                 <div className="price-button float-start  float-sm-end ">
                                     <div className="btn-group">
 
-                                        <a href="#" className="btn btn-price-monthly border-0">Monthly</a>
-                                        <a href="#" className="btn btn-price-yearly">Yearly</a>
+                                        <Link to="#" className="btn btn-price-monthly border-0">Monthly</Link>
+                                        <Link to="#" className="btn btn-price-yearly">Yearly</Link>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@ const Pricing = () => {
 
 
                                         </ul>
-                                        <a href="#" className="btn btn-primary btn-block w-100 p-2">Purchase now</a>
+                                        <Link to="#" className="btn btn-primary btn-block w-100 p-2">Purchase now</Link>
 
                                     </div>
 
@@ -115,7 +115,7 @@ const Pricing = () => {
 
 
                                         </ul>
-                                        <a href="#" className="btn btn-primary btn1 btn-block w-100 p-2">Purchase now</a>
+                                        <Link to="#" className="btn btn-primary btn1 btn-block w-100 p-2">Purchase now</Link>
 
                                     </div>
 
@@ -166,7 +166,7 @@ const Pricing = () => {
 
 
                                         </ul>
-                                        <a href="#" className="btn btn-primary btn-block w-100 p-2">Purchase now</a>
+                                        <Link to="#" className="btn btn-primary btn-block w-100 p-2">Purchase now</Link>
 
                                     </div>
 
