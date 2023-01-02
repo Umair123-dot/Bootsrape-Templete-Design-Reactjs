@@ -45,7 +45,7 @@ const ResultStudents = () => {
                             alt="Responsive image" />
                     </div>
                     <div className="result-para">
-                        <p className="result-number text-center">8,300</p>
+                        <p className="result-number text-center"><sup></sup>8,300<span></span></p>
                         <p className="result-alph text-center">EXPERT INSTRUCTOR</p>
                     </div>
                     <div>

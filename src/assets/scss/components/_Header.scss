@@ -8,24 +8,21 @@
         }
     }
     .navbar-nav {
-        padding-right: 100px;
+        padding-right: em(3);
         .nav-item {
-          
-            
             .nav-link {
                 color: $navlogo;
                 font-weight: bold;
                 padding-left: 20px;
                 padding-right: 20px;
-               
-              
+
                 &:hover {
                     background-color: $btnYellow;
                     border-radius: 5px;
-                   
                 }
             }
-            &:active{}
+            &:active {
+            }
         }
     }
     .search {
@@ -36,7 +33,7 @@
             font-size: 16px;
             margin-right: 20px;
             border-radius: 4px;
-               
+
             width: 115px;
             height: 44px;
 
@@ -52,11 +49,11 @@
             margin-top: 0px;
             width: 44px;
             height: 44px;
-            &:focus{
+            &:focus {
                 width: 250px;
             }
         }
-        input[type=text]:focus {
+        input[type="text"]:focus {
             width: 250px;
             margin-left: 10px;
         }

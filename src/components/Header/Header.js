@@ -1,11 +1,17 @@
 import React,{useState} from "react";
 import logo from '../../assets/images/logo.png';
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 import { Button } from "../Button";
 import { type } from "@testing-library/user-event/dist/type";
 
 const Header = () => {
   const [loading, setLoading] = useState(false)
+
+  let activeStyle = {
+    backgroundColor:"#fdc800",
+    borderRadius:"5px"
+    
+  };
   return (
     <div className="">
       <nav
@@ -13,7 +19,7 @@ const Header = () => {
        
       >
         <div className="container">
-          <Link className="navbar-brand" to="/">
+          <NavLink className="navbar-brand" to="/">
             <img
               src={logo}
               width="60"
@@ -22,7 +28,7 @@ const Header = () => {
               alt=""
             />
             <span>FOR EDUCATION</span>
-          </Link>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -39,25 +45,30 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="mynavbar">
             <ul className="navbar-nav  ms-auto mb-3  mb-lg-0"  >
               <li className="nav-item">
-                <Link className="nav-link" to="/" >
+                <NavLink className="nav-link" 
+                style={({isActive})=> isActive ? activeStyle:undefined} to="/" exact>
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <NavLink className="nav-link" 
+                style={({isActive})=>isActive ? activeStyle:undefined} to="/about" exact>
                   About
-                </Link>
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/course">
+                <NavLink className="nav-link" 
+                style={({isActive})=>isActive ? activeStyle:undefined
+              } to="/course" exact>
                   Course
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/detailcourse">
+                <NavLink className="nav-link"
+                style={({isActive})=> isActive ? activeStyle:undefined} to="/detailcourse" exact>
                   Contact
-                </Link>
+                </NavLink>
               </li>
             </ul>
             <form className="d-flex search" role="search">
