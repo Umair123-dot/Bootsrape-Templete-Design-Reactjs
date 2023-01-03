@@ -1,6 +1,6 @@
 import React from "react";
-import CourseCardDrop from '../../components/CourseCardDrop/CourseCardDrop'
-import Subscribe from '../../components/Subscribe/Subscribe'
+import CourseCardDrop from '../../components/CourseCardDrop/CourseCardDrop';
+import Subscribe from '../../common/Subscribe/Subscribe';
 
 
 const Course = () => {

@@ -1,6 +1,5 @@
 .top-feature-wrappers {
-
-    margin-bottom: 50px;
+   
 
     .top-heading {
         color: $navlogo;
@@ -9,40 +8,34 @@
     }
 
     .card {
-            .image-card {
-                background: url("../../images/cardimage.png");
-                background-repeat: no-repeat;
-                background-size: cover;
-                min-height: 200px;
-                padding: 20px;
-                border-bottom: 0px;
-                .image-sort {
-                    position: relative;
-                    bottom: -40px;
-                    border: 10px solid $whitebtn;
-                }
+        .image-card {
+            background: url("../../images/cardimage.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 200px;
+            padding: 20px;
+            border-bottom: 0px;
+            .image-sort {
+                position: relative;
+                bottom: -40px;
+                border: 10px solid $whitebtn;
             }
-            .card-content-area {
-                padding-left: 28px;
-                .card-heading1 {
-                    padding-top: 24px;
-                    font-weight: bold;
-                    font-family: "Times New Roman", Times, serif;
-                    font-size: 15px;
-                    color: $navlogo;
-                }
-                .card-text {
-                    font-family: Georgia, "Times New Roman", Times, serif;
-                    color: $cardfont;
-                    font-size: 14px;
-                    margin-top: 10px;
-                }
-            }
-            // .image-large {
-            //     .image-large {
-            //         height: 100%;
-            //     }
-
-            // }
         }
+        .card-content-area {
+            padding-left: 28px;
+            .card-heading1 {
+                padding-top: 24px;
+                font-weight: bold;
+                font-family: "Times New Roman", Times, serif;
+                font-size: 15px;
+                color: $navlogo;
+            }
+            .card-text {
+                font-family: Georgia, "Times New Roman", Times, serif;
+                color: $cardfont;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        }
+    }
 }

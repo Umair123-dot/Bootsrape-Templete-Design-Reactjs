@@ -5,14 +5,14 @@ import {About} from "./pages/About/index";
 import {Course} from './pages/Course/index'
 import {CourseDetail} from './pages/CourseDetail/index';
 import Topbar from './components/Topbar/Topbar';
-import Header from './components/Header/Header';
+import Header from './common/Header';
 
 //Helper Routes
 import {APP_ROUTES} from './helper/routesHelper';
 
 
 import { BrowserRouter as Router,Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer/Footer";
+import Footer from "./common/Footer/Footer";
 import { Loader } from "./components/Loader";
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import CourseFeedback from '../../components/CourseFeedback/CourseFeedback';
-import Subscribe from '../../components/Subscribe/Subscribe'
+import Subscribe from '../../common/Subscribe/Subscribe';
 import UserResearch from '../../components/UserResearch/UserResearch';
 
 

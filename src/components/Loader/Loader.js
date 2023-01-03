@@ -9,8 +9,8 @@ const Loader =props=>{
    } =props
      return(
         <div className={`d-flex flex-column ${position} w-100 ${classes}`}>
-            <div class={`spinner-border ${color}`} role="status">
-             <span class="visually-hidden">Loading...</span>
+            <div className={`spinner-border ${color}`} role="status">
+             <span className="visually-hidden">Loading...</span>
              
             </div>
          

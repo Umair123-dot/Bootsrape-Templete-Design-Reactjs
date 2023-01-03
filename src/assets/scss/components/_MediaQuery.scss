@@ -67,6 +67,15 @@
     .detail-content{
         left: 64px !important;
     }
+    .search{
+        input[type="text"]:focus {
+            width: 100px !important;
+            margin-left: 10px;
+        }
+    }
+    .couse-head-large{
+        font-size: 40px !important;
+    }
   
 }
 @media screen and (min-width: 992px) and (max-width:1199px) {
@@ -84,7 +93,7 @@
 
     .sus-content {
         margin-bottom: 150px;
-        .btn-umair {
+        .btn-large {
             margin-left: -100px;
         }
     }
