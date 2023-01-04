@@ -60,7 +60,7 @@ const Card = (card) => {
   
   // const {couseraimage}=props;
   return (
-    <div className="col-12 col-md-6 col-lg-4">
+    <div className="col-12 col-md-6 col-lg-4 pb-2">
     
       
       <div className="card">

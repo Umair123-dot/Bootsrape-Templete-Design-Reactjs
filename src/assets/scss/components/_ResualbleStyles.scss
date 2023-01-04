@@ -1,3 +1,11 @@
 @mixin bg-itsection{
     background: linear-gradient(to bottom, $bgnavbar 0%, $bgnavbar 30%, $whitebtn 0%, $whitebtn 70%);
 }
+
+.form-input-error {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #f46a6a;
+    text-align: start;
+}

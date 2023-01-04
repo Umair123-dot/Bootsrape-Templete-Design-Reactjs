@@ -12,6 +12,7 @@ import ResultStudents from "../../components/ResultStudents/ResultStudents";
 import Subscribe from "../../common/Subscribe/Subscribe";
 import cardData from "../../data/mocks/CardTopFeatures";
 
+
 const Home = () => {
   return (
     <div>
@@ -21,11 +22,12 @@ const Home = () => {
       <div className="container">
         <div className="row g-4 mb-5">
           
-            {cardData.map((card) => (
+            {cardData.slice(0,8).map((card) => (
               <Card key={card.id} {...card} />
             ))}
           
         </div>
+        
       </div>
       </div>
 
