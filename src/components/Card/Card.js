@@ -70,6 +70,7 @@ const Card = (card) => {
           </div>
         </div>
         <div className="card-body card-content-area">
+          <h5 className=" card-heading1">{card.category}</h5>
           <h5 className=" card-heading1">{card.cardpara}</h5>
           <p className="card-text">{card.cardtext}</p>
         </div>

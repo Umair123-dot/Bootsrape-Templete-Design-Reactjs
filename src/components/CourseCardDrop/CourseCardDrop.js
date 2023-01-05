@@ -11,38 +11,39 @@ const CourseCardDrop = () => {
     Math.ceil(cardDataCourse.length / showPerPage)
   );
   const [counter, setCounter] = useState(1);
-  const [loading,setLoading] =useState(false);
+  const [loading, setLoading] = useState(false);
   const [pagination, setPagination] = useState({
     start: 0,
     end: showPerPage,
   });
-// const startPaginationVal = pagination.start
-// const endPaginationVal = pagination.end
-
 
   const onPaginationChange = (start, end) => {
     setPagination({ start: start, end: end });
+    console.log({ start, end });
   };
   const onButtonClick = (type) => {
-    console.log("on click")
-    setLoading(true)
+    console.log("on click");
+    setLoading(true);
     if (type === "prev") {
       if (counter === 1) {
         setCounter(1);
+        setLoading(false);
       } else {
         setCounter(counter - 1);
       }
     } else if (type === "next") {
       if (numberOfButtons === counter) {
         setCounter(counter);
+        setLoading(false);
       } else {
         setCounter(counter + 1);
       }
     }
-setTimeout(() => {
-  setLoading(false)
-}, 2000);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   };
+
   return (
     <div className="course-wrapper">
       <div className="course-relate">
@@ -58,11 +59,12 @@ setTimeout(() => {
               <div className="row mb-2">
                 <span className="label course-label">Categories</span>
               </div>
-              <div className="row ">
+              <div className="row">
                 <div className="btn-group">
                   <button className="btn btn-lg course-button" type="button">
                     Web development
                   </button>
+
                   <button
                     type="button"
                     className="btn btn-lg course-drop-arrow  dropdown-toggle-split"
@@ -71,7 +73,23 @@ setTimeout(() => {
                   >
                     <span className="fa-solid fa-angle-down"></span>
                   </button>
-                  <ul className="dropdown-menu">...</ul>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        Reactjs
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        Vuesjs
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        Nextjs
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -158,12 +176,12 @@ setTimeout(() => {
               showPerPage={showPerPage}
               onPaginationChange={onPaginationChange}
               total={cardDataCourse.length}
-              loading = {loading}
-              setLoading = {setLoading}
-              counter = {counter}
-              setCounter = {setCounter}
-              onButtonClick = {onButtonClick}
-              numberOfButtons = {numberOfButtons}
+              loading={loading}
+              setLoading={setLoading}
+              counter={counter}
+              setCounter={setCounter}
+              onButtonClick={onButtonClick}
+              numberOfButtons={numberOfButtons}
             />
           </div>
         </div>
