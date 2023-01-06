@@ -6,6 +6,10 @@ import  Button  from "../../components/Button";
 
 const Header = () => {
   // const [loading, setLoading] = useState(false)
+  const handChangeH=(event)=>{
+    console.log(event.target.value);
+
+  }
 
   let activeStyle = {
     backgroundColor:"#fdc800",
@@ -79,7 +83,7 @@ const Header = () => {
               {/* isLoading={loading} */}
               <div className="form-group has-search">
                 <span className="fa fa-search form-control-feedback"></span>
-                <input type="text" className="form-control" placeholder="" />
+                <input type="text"  className="form-control" onChange={handChangeH} placeholder="" />
               </div>
             </form>
           </div>

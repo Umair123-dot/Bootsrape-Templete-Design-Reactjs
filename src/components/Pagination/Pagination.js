@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Pagination.scss";
 const Pagination = ({
@@ -8,7 +8,7 @@ const Pagination = ({
   setCounter,
   onButtonClick,
   numberOfButtons,
-  setLoading
+  setLoading,
 }) => {
   useEffect(() => {
     const value = showPerPage * counter;
@@ -17,12 +17,12 @@ const Pagination = ({
   }, [counter]);
 
   const handleClick = (index) => {
-    setLoading(true)
-    setCounter(index + 1)
+    setLoading(true);
+    setCounter(index + 1);
     setTimeout(() => {
       setLoading(false);
     }, 1000);
-  }
+  };
   return (
     <div className="pagination-wrapper d-flex justify-content-center">
       <nav aria-label="Page navigation example">
@@ -34,15 +34,26 @@ const Pagination = ({
           </li>
 
           {new Array(numberOfButtons).fill("").map((ele, index) => (
-            <li className={`page-item ${index + 1 === counter ? "active" : null}`} key={ele.id}>
-              <Link to="#" className="page-link" onClick={() =>  handleClick(index)}>
+            <li
+              className={`page-item ${index + 1 === counter ? "active" : null}`}
+              key={ele.id}
+            >
+              <Link
+                to="#"
+                className="page-link"
+                onClick={() => handleClick(index)}
+              >
                 {index + 1}
               </Link>
             </li>
           ))}
 
           <li className="page-item">
-            <Link to="#" className="page-link" onClick={() => onButtonClick("next")}>
+            <Link
+              to="#"
+              className="page-link"
+              onClick={() => onButtonClick("next")}
+            >
               <i className="fa-solid fa-arrow-right"></i>
             </Link>
           </li>

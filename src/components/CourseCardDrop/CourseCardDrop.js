@@ -6,23 +6,14 @@ import Card from "../Card/Card";
 import Pagination from "../Pagination";
 import Loader from "../Loader/Loader";
 import Dropdown from "../Dropdown/Dropdown";
-import { categoryDropDownData } from "../../data/mocks/DropDownData";
+import { categoryDropDownData ,levelDropDownData,languageDropDownData,instructorDropDownData} from "../../data/mocks/DropDownData";
 
 const CourseCardDrop = () => {
   const [showPerPage, setShowPerPage] = useState(9);
   const [filterTextValue, setFilterTextValue] = useState("");
-  console.log(categoryDropDownData);
-  // let filteredValue = cardDataCourse.filter((items) => {
-  //   // if(filterTextValue==="Reacjs"){
-  //   //   return items.category==="Reactjs";
-  //   // }else if(filterTextValue==="VueJs"){
-  //   //   return items.category==="VueJS"
-  //   // }else if(filterTextValue==="NextJs"){
-  //   //   return items.category==="NextjS"
-  //   // }else{
-  //   //    return items
-  //   // }
-  // });
+  
+ 
+
   const [numberOfButtons, setnumberOfButtons] = useState(
     Math.ceil(cardDataCourse.length / showPerPage)
   );
@@ -60,16 +51,13 @@ const CourseCardDrop = () => {
       setLoading(false);
     }, 2000);
   };
-  // const onFilterValueSelected = (filterValue) =>{
-  //  setFilterTextValue(filterValue);
-
-  // }
+ 
   console.log(
     cardDataCourse
       .slice(pagination.start, pagination.end)
       .filter((item) => item.category.includes(filterTextValue))
   );
-  let carddata;
+
   return (
     <div className="course-wrapper">
       <div className="course-relate">
@@ -81,10 +69,28 @@ const CourseCardDrop = () => {
             </div>
           </div>
           <div className="row  pt-3">
-            {/* {categoryDropDownData?.dropDownOptions.map((item) => ( */}
+       
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mt-4 mt-md-4">
               <Dropdown
                 item={categoryDropDownData}
+                setFilterTextValue={(val) => setFilterTextValue(val)}
+              />
+            </div>
+            <div className="col-12 col-sm-6 col-md-6 col-lg-3 mt-4 mt-md-4">
+              <Dropdown
+                item={levelDropDownData}
+                setFilterTextValue={(val) => setFilterTextValue(val)}
+              />
+            </div>
+            <div className="col-12 col-sm-6 col-md-6 col-lg-3 mt-4 mt-md-4">
+              <Dropdown
+                item={languageDropDownData}
+                setFilterTextValue={(val) => setFilterTextValue(val)}
+              />
+            </div>
+            <div className="col-12 col-sm-6 col-md-6 col-lg-3 mt-4 mt-md-4">
+              <Dropdown
+                item={instructorDropDownData}
                 setFilterTextValue={(val) => setFilterTextValue(val)}
               />
             </div>
@@ -103,7 +109,7 @@ const CourseCardDrop = () => {
                     .map((card) => <Card key={card.id} {...card} />)
                 : cardDataCourse
                     .slice(pagination.start, pagination.end)
-                    // .filter((item) => item.category.includes(filterTextValue))
+
                     .map((card) => <Card key={card.id} {...card} />)}
             </div>
             <Pagination
