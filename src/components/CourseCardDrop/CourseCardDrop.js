@@ -1,17 +1,34 @@
 import React, { useState } from "react";
 
 import cardDataCourse from "../../data/mocks/CardUserCourse";
+// import DropDownData from "../../data/mocks/DropDownData";
 import Card from "../Card/Card";
 import Pagination from "../Pagination";
 import Loader from "../Loader/Loader";
+import Dropdown from "../Dropdown/Dropdown";
+import { categoryDropDownData } from "../../data/mocks/DropDownData";
 
 const CourseCardDrop = () => {
   const [showPerPage, setShowPerPage] = useState(9);
+  const [filterTextValue, setFilterTextValue] = useState("");
+  console.log(categoryDropDownData);
+  // let filteredValue = cardDataCourse.filter((items) => {
+  //   // if(filterTextValue==="Reacjs"){
+  //   //   return items.category==="Reactjs";
+  //   // }else if(filterTextValue==="VueJs"){
+  //   //   return items.category==="VueJS"
+  //   // }else if(filterTextValue==="NextJs"){
+  //   //   return items.category==="NextjS"
+  //   // }else{
+  //   //    return items
+  //   // }
+  // });
   const [numberOfButtons, setnumberOfButtons] = useState(
     Math.ceil(cardDataCourse.length / showPerPage)
   );
   const [counter, setCounter] = useState(1);
   const [loading, setLoading] = useState(false);
+
   const [pagination, setPagination] = useState({
     start: 0,
     end: showPerPage,
@@ -43,7 +60,16 @@ const CourseCardDrop = () => {
       setLoading(false);
     }, 2000);
   };
+  // const onFilterValueSelected = (filterValue) =>{
+  //  setFilterTextValue(filterValue);
 
+  // }
+  console.log(
+    cardDataCourse
+      .slice(pagination.start, pagination.end)
+      .filter((item) => item.category.includes(filterTextValue))
+  );
+  let carddata;
   return (
     <div className="course-wrapper">
       <div className="course-relate">
@@ -55,110 +81,14 @@ const CourseCardDrop = () => {
             </div>
           </div>
           <div className="row  pt-3">
+            {/* {categoryDropDownData?.dropDownOptions.map((item) => ( */}
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mt-4 mt-md-4">
-              <div className="row mb-2">
-                <span className="label course-label">Categories</span>
-              </div>
-              <div className="row">
-                <div className="btn-group">
-                  <button className="btn btn-lg course-button" type="button">
-                    Web development
-                  </button>
-
-                  <button
-                    type="button"
-                    className="btn btn-lg course-drop-arrow  dropdown-toggle-split"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <span className="fa-solid fa-angle-down"></span>
-                  </button>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Reactjs
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Vuesjs
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Nextjs
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <Dropdown
+                item={categoryDropDownData}
+                setFilterTextValue={(val) => setFilterTextValue(val)}
+              />
             </div>
-
-            <div className="col-12 col-sm-6 col-md-6 col-lg-3 mt-4 mt-md-4">
-              <div className="row mb-2">
-                <span className="label course-label">Level</span>
-              </div>
-              <div className="row ">
-                <div className="btn-group">
-                  <button className="btn btn-lg course-button" type="button">
-                    All Level
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-lg course-drop-arrow  dropdown-toggle-split"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <span className="fa-solid fa-angle-down"></span>
-                  </button>
-                  <ul className="dropdown-menu">...</ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12 col-sm-6 col-md-6 col-lg-3 mt-4 mt-md-4">
-              <div className="row mb-2">
-                <span className="label course-label">English</span>
-              </div>
-              <div className="row ">
-                <div className="btn-group">
-                  <button className="btn btn-lg course-button" type="button">
-                    English
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-lg course-drop-arrow  dropdown-toggle-split"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <span className="fa-solid fa-angle-down"></span>
-                  </button>
-                  <ul className="dropdown-menu">...</ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12 col-sm-6 col-md-6 col-lg-3 mt-4 mt-md-4">
-              <div className="row mb-2">
-                <span className="label course-label">Instructor</span>
-              </div>
-              <div className="row ">
-                <div className="btn-group">
-                  <button className="btn btn-lg course-button" type="button">
-                    All Instructor
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-lg course-drop-arrow  dropdown-toggle-split"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <span className="fa-solid fa-angle-down"></span>
-                  </button>
-                  <ul className="dropdown-menu">...</ul>
-                </div>
-              </div>
-            </div>
+            {/* ))} */}
           </div>
         </div>
       </div>
@@ -166,11 +96,15 @@ const CourseCardDrop = () => {
         <div className="select-course-wrapper ">
           <div className="container">
             <div className="row gy-4">
-              {cardDataCourse
-                .slice(pagination.start, pagination.end)
-                .map((card) => (
-                  <Card key={card.id} {...card} />
-                ))}
+              {filterTextValue.length
+                ? cardDataCourse
+                    .filter((item) => item.category === filterTextValue)
+                    .slice(pagination.start, pagination.end)
+                    .map((card) => <Card key={card.id} {...card} />)
+                : cardDataCourse
+                    .slice(pagination.start, pagination.end)
+                    // .filter((item) => item.category.includes(filterTextValue))
+                    .map((card) => <Card key={card.id} {...card} />)}
             </div>
             <Pagination
               showPerPage={showPerPage}
